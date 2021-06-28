@@ -1,0 +1,23 @@
+name: data
+description: Shopping List app data layer
+publish_to: none
+version: 0.0.1
+author: Emanuel López
+homepage: http://www.emanuellopez.com.ar
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  domain:
+    path: ../domain
+  logging: ^1.0.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
