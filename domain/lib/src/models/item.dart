@@ -1,17 +1,29 @@
-class Item {
+import 'package:domain/domain.dart';
+import 'package:uuid/uuid.dart';
+
+class Item implements IItem {
   Item({
     this.categoryId,
-    required this.id,
+    String? id,
     required this.name,
     this.price,
-    required this.shoppingListId,
+    this.purchaseDate,
     this.quantity = 1,
-  });
+    required this.shoppingListId,
+  }) : id = id ?? Uuid().v4();
 
+  @override
   String? categoryId;
+  @override
   final String id;
+  @override
   final String name;
+  @override
   double? price;
-  final String shoppingListId;
+  @override
+  DateTime? purchaseDate;
+  @override
   final int quantity;
+  @override
+  final String shoppingListId;
 }
