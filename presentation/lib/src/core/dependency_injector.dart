@@ -1,3 +1,4 @@
+import 'package:data/data.dart';
 import 'package:domain/domain.dart';
 import 'package:injector/injector.dart';
 import 'package:mock/mock.dart';
@@ -30,6 +31,7 @@ class DependencyInjector {
 
     injector.registerDependency<ShoppingListBloc>(
       () => ShoppingListBloc(
+        searchItemNameUseCase: injector.get<SearchItemNameUseCase>(),
         saveItemUseCase: injector.get<SaveItemUseCase>(),
         searchItemsUseCase: injector.get<SearchItemsUseCase>(),
       ),
@@ -37,6 +39,12 @@ class DependencyInjector {
   }
 
   void _initilizeUseCases() {
+    injector.registerDependency<SearchItemNameUseCase>(
+      () => SearchItemNameUseCase(
+        itemNameRepository: injector.get<ItemNameRepository>(),
+      ),
+    );
+
     injector.registerDependency<LoadShoppingListsUseCase>(
       () => LoadShoppingListsUseCase(
         shoppingListRepository: injector.get<ShoppingListRepository>(),
@@ -72,5 +80,9 @@ class DependencyInjector {
         () => ShoppingListMemoryRepository(),
       );
     }
+
+    injector.registerDependency<ItemNameRepository>(
+      () => ItemNameGoogleRepository(),
+    );
   }
 }

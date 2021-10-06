@@ -7,13 +7,15 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-      debugShowCheckedModeBanner: false,
-      initialRoute: NamedRoute.home,
-      localizationsDelegates: [
-        AppLocalizations.delegate,
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-      ],
-      routes: AppRouter.all,
-      supportedLocales: AppLocalizations.localizationList);
+        debugShowCheckedModeBanner: false,
+        initialRoute: NamedRoute.home,
+        localizationsDelegates: [
+          AppLocalizations.delegate,
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+        ],
+        routes: AppRouter.all,
+        supportedLocales: AppLocalizations.localizationList,
+        theme: AppTheme.dark,
+      );
 }

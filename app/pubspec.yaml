@@ -11,9 +11,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  dart_utils:
+    path: ../../dart-utils
   injector: ^2.0.0
   presentation:
     path: ../presentation
+  flutter_qr_bar_scanner: ^2.0.0
 
 dev_dependencies:
   flutter_test:

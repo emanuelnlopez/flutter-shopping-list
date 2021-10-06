@@ -22,6 +22,7 @@ dependencies:
   injector: ^2.0.0
   mock:
     path: ../mock
+  flutter_qr_bar_scanner: ^2.0.0
 
 dev_dependencies:
   flutter_test:
