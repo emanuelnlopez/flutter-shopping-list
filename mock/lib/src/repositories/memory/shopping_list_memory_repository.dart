@@ -4,23 +4,7 @@ import 'package:logging/logging.dart';
 class ShoppingListMemoryRepository implements ShoppingListRepository {
   static final Logger _logger = Logger('ShoppingListMockRepository');
 
-  final _defaultShoppingList = {
-    '1': ShoppingList(
-      creationDate: DateTime.now(),
-      id: '1',
-      name: 'This is a mock Shopping List',
-    ),
-    '2': ShoppingList(
-      creationDate: DateTime.now(),
-      id: '2',
-      name: 'Another Shopping List',
-    ),
-    '3': ShoppingList(
-      creationDate: DateTime.now(),
-      id: '3',
-      name: 'Birthday Shopping List',
-    ),
-  };
+  final Map<String, ShoppingList> _defaultShoppingList = {};
 
   @override
   Future<void> add(ShoppingList item) async {

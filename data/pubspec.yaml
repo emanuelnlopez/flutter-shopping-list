@@ -19,8 +19,15 @@ dependencies:
   html: ^0.15.0
   http: ^0.13.3
   logging: ^1.0.1
+  path: ^1.8.0
+  path_provider: ^2.0.2
+  sqflite: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter:
+  assets:
+    - assets/sql/
 

@@ -72,16 +72,26 @@ class DependencyInjector {
 
   void _initializeRepositories(Environment environment) {
     if (environment == Environment.mock) {
-      injector.registerDependency<ItemRepository>(
+      injector.registerSingleton<ItemRepository>(
         () => ItemMemoryRepository(),
       );
 
-      injector.registerDependency<ShoppingListRepository>(
+      injector.registerSingleton<ShoppingListRepository>(
         () => ShoppingListMemoryRepository(),
       );
     }
 
-    injector.registerDependency<ItemNameRepository>(
+    if (environment == Environment.prod) {
+      injector.registerSingleton<SqfliteDatabase>(
+        () => SqfliteDatabase(),
+      );
+
+      // injector.registerDependency<ItemRepository>(
+      //   () => ,
+      // );
+    }
+
+    injector.registerSingleton<ItemNameRepository>(
       () => ItemNameGoogleRepository(),
     );
   }

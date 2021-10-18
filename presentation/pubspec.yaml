@@ -17,6 +17,8 @@ dependencies:
     sdk: flutter
   data:
     path: ../data
+  dart_utils:
+    path: ../../dart-utils
   domain:
     path: ../domain
   injector: ^2.0.0

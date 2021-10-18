@@ -28,8 +28,9 @@ class HomeBloc implements Bloc {
     _shoppingListController.sink.add(shoppingLists);
   }
 
-  void saveShoppingList(ShoppingList shoppingList) {
+  void saveShoppingList(ShoppingList shoppingList) async {
     _saveShoppingListUseCase.shoppingList = shoppingList;
-    _saveShoppingListUseCase.execute();
+    await _saveShoppingListUseCase.execute();
+    loadShoppingLists();
   }
 }

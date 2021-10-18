@@ -1,4 +1,9 @@
 {
+  "general_accept": "Aceptar",
+  "general_cancel": "Cancelar",
   "home_page_title": "Shopping List",
-  "loading_indicator_message": "Cargando, aguarde por favor..."
+  "loading_indicator_message": "Cargando, aguarde por favor…",
+  "new_shopping_list_dialog_hint": "Mi nueva lista de compras",
+  "new_shopping_list_dialog_message": "Por favor ingrese el nombre de la nueva lista",
+  "new_shopping_list_dialog_title": "Nueva lista"
 }

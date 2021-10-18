@@ -2,7 +2,6 @@ name: app
 description: Shopping List app
 publish_to: 'none'
 version: 0.0.1
-author: Emanuel López
 homepage: http://www.emanuellopez.com.ar
 
 environment:
@@ -17,6 +16,7 @@ dependencies:
   presentation:
     path: ../presentation
   flutter_qr_bar_scanner: ^2.0.0
+  uuid: ^3.0.4
 
 dev_dependencies:
   flutter_test:

@@ -1,3 +1,4 @@
+import 'package:dart_utils/dart_utils.dart';
 import 'package:domain/domain.dart';
 import 'package:flutter/material.dart';
 import 'package:presentation/presentation.dart';
@@ -15,7 +16,12 @@ class ShoppingListCard extends StatelessWidget {
           NamedRoute.shoppingList,
           arguments: shoppingList,
         ),
-        subtitle: Text(shoppingList.creationDate.toString()),
+        subtitle: Text(
+          DateTimeFormat.format(
+            dateTime: shoppingList.creationDate,
+            format: DateTimeFormat.fullDateTime,
+          )!,
+        ),
         title: Text(shoppingList.name),
       );
 }

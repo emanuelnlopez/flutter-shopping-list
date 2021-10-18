@@ -12,6 +12,7 @@ export 'src/features/shopping_list/shopping_list_bloc.dart';
 export 'src/features/shopping_list/shopping_list_page.dart';
 export 'src/ui/constants/app_theme.dart';
 export 'src/ui/constants/spacing.dart';
+export 'src/ui/widgets/default_dialog.dart';
 export 'src/ui/widgets/item_card.dart';
 export 'src/ui/widgets/loading_indicator.dart';
 export 'src/ui/widgets/shopping_list_card.dart';

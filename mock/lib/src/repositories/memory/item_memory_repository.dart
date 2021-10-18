@@ -4,32 +4,7 @@ import 'package:logging/logging.dart';
 class ItemMemoryRepository implements ItemRepository {
   static final Logger _logger = Logger('CategoryMemoryRepository');
 
-  final _defaultItems = {
-    '1': Item(
-      id: '1',
-      shoppingListId: '1',
-      categoryId: '1',
-      name: 'Toilet paper',
-      price: 150.00,
-      quantity: 1,
-    ),
-    '2': Item(
-      id: '2',
-      shoppingListId: '1',
-      categoryId: '1',
-      name: 'Toothpaste',
-      price: 80.00,
-      quantity: 1,
-    ),
-    '3': Item(
-      id: '3',
-      shoppingListId: '1',
-      categoryId: '4',
-      name: 'Coffee',
-      price: 100.00,
-      quantity: 1,
-    ),
-  };
+  final Map<String, Item> _defaultItems = {};
 
   @override
   Future<void> add(Item item) async {

@@ -3,10 +3,11 @@ import 'package:uuid/uuid.dart';
 
 class ShoppingList implements IShoppingList {
   ShoppingList({
-    required this.creationDate,
+    DateTime? creationDate,
     String? id,
     required this.name,
-  }) : id = id ?? Uuid().v4();
+  })  : creationDate = creationDate ?? DateTime.now(),
+        id = id ?? Uuid().v4();
 
   @override
   final DateTime creationDate;
